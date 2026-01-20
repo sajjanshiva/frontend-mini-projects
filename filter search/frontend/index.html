@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search - Debounce & Throttle Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 Movie Search</h1>
+    <p class="subtitle">Debouncing reduces API calls while typing</p>
+    
+    <!-- Search Input (DEBOUNCED) -->
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search for a movie..."
+      >
+      <span id="apiCounter">API Calls: 0</span>
+    </div>
+
+    <!-- Results -->
+    <div id="results"></div>
+
+    <!-- Scroll Info (THROTTLED) -->
+    <div class="scroll-info">
+      <p>Scroll events: <span id="scrollCount">0</span></p>
+      <p>Throttled events: <span id="throttledCount">0</span></p>
+    </div>
+  </div>
+
+  <!-- Dummy content to make page scrollable -->
+  <div style="height: 2000px; padding: 40px 20px; text-align: center;">
+    <h2 style="color: white; margin-bottom: 20px;">👇 Scroll Down!</h2>
+    <p style="color: rgba(255,255,255,0.8);">Watch the scroll counters in the bottom-right corner</p>
+    <p style="color: rgba(255,255,255,0.8); margin-top: 100px;">Keep scrolling to see the difference between normal and throttled events...</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
