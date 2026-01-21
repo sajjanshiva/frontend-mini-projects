@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Order Storage Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🍔 Food Order Storage Demo</h1>
+
+  <!-- SESSION -->
+  <div class="section session">
+    <h2>Session Storage (Current Order)</h2>
+    <p class="info">Clears when tab is closed</p>
+
+    <input type="text" id="username" placeholder="Enter your name">
+    <button id="startOrderBtn">Start Order</button>
+
+    <div class="menu">
+      <div class="item">
+        <span>🍕 Pizza - ₹250</span>
+        <button class="add-btn" data-item="Pizza" data-price="250">Add</button>
+      </div>
+      <div class="item">
+        <span>🍔 Burger - ₹150</span>
+        <button class="add-btn" data-item="Burger" data-price="150">Add</button>
+      </div>
+      <div class="item">
+        <span>🥤 Coke - ₹60</span>
+        <button class="add-btn" data-item="Coke" data-price="60">Add</button>
+      </div>
+    </div>
+
+    <div id="orderDisplay"></div>
+    <button id="clearSessionBtn" class="clear">Clear Session</button>
+  </div>
+
+  <!-- LOCAL -->
+  <div class="section local">
+    <h2>Local Storage (Favorites)</h2>
+    <p class="info">Saved permanently</p>
+
+    <input type="text" id="favItem" placeholder="Favorite food">
+    <button id="saveFavBtn">Save</button>
+
+    <div id="favDisplay"></div>
+
+    <h3>Theme</h3>
+    <button id="lightThemeBtn">Light</button>
+    <button id="darkThemeBtn">Dark</button>
+
+    <button id="clearLocalBtn" class="clear">Clear Favorites</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
